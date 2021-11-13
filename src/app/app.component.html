@@ -1,0 +1,28 @@
+
+<mat-toolbar color="primary">
+    <mat-toolbar-row >
+      <button 
+        mat-icon-button 
+        (click)="sidenav.toggle()"
+        fxShow="true" 
+        fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <main-menu></main-menu>
+    </mat-toolbar-row>
+
+</mat-toolbar>
+
+<mat-sidenav-container fxFlexFill>
+    
+    <mat-sidenav #sidenav mode="side">
+        <mobile-menu></mobile-menu>
+    </mat-sidenav>
+      
+    <mat-sidenav-content fxFlexFill>
+      <main [@routeAnimations]="prepareRoute(outlet)" >
+          <router-outlet #outlet="outlet"></router-outlet>
+      </main>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
