@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core' ;
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { SideNavService } from '../../../services/side-nav.service';
+import { AppService } from '../../../app.service';
 
 @Component({
   selector: 'mobile-menu',
@@ -9,21 +8,13 @@ import { SideNavService } from '../../../services/side-nav.service';
 })
 export class MobileMenuComponent implements OnInit {
 
-  @ViewChild('sidenav') public sidenav: MatSidenavModule;
+  menu: any[] = [];
 
-  constructor(private sideNavService: SideNavService) { }
+  constructor(private appService: AppService) { }
 
   ngOnInit() { 
-   this.sideNavService.sideNavToggleSubject.subscribe(()=> {
-      // this.sidenav.toggle();
-      console.log('toggle');
-    });
+    this.menu = this.appService.getAllMenu();
   } 
 
-//   toggleRightSidenav() {
-//     this.sidenav.toggle();
-//  }
-
- 
 }
 

@@ -1,3 +1,12 @@
 .menu-spacer{
     flex-grow: 1;
+    max-width: 50px;
+}
+.system-menu-icons{
+    display: flex;
+    & > mat-icon{
+        align-self: center;
+        color: white;
+        cursor: pointer;
+    }
 }

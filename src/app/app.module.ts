@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from "@angular/flex-layout";
 // services
-import { SideNavService } from './services/side-nav.service';
+import { AppService } from './app.service';
 // material
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -44,7 +44,7 @@ import { ProjectsComponent } from './views/workflow/projects/projects.component'
 
     FlexLayoutModule
   ],
-  providers: [SideNavService],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

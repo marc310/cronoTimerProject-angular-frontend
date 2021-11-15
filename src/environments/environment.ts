@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  domain: 'http://localhost/dev/projects/cronotimer-project/api/projetos/info/',
+  // mapApiKey: 'AIzaSyA6s497mKnN7hP7fzCRIOOAJ_wvpG-2RLM'
 };
 
 /*
