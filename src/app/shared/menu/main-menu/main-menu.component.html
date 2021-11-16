@@ -1,18 +1,19 @@
-  
-      <span>{{ title }}</span>
-      <span class="menu-spacer"></span>
 
-      <div class="menu-item" fxLayout="row" fxShow="true" fxHide.lt-md >
-        <div *ngFor="let m of menu; let i = index;">
-          <a routerLink="{{ m.link }}" mat-button>{{ m.name }}</a>
-        </div>
-      </div>
+  <div class="logo-space" fxLayout="row" routerLink="/" >
+    <span class="menu-item"><img class="logo-menu" src="assets/favicon.png" alt=""></span>
+    <span class="menu-item">{{ title }}</span>
+  </div>
 
-      <div fxFlex fxShow="true" fxLayoutAlign="end center" fxLayoutGap="15px" class="system-menu-icons">
-          <mat-icon routerLink="" aria-hidden="false" aria-label="Example home icon">question_answer</mat-icon>
-          <mat-icon routerLink="" aria-hidden="false" aria-label="Example home icon">store</mat-icon>
-          <mat-icon routerLink="" aria-hidden="false" aria-label="Example home icon">settings</mat-icon>
-        
-      </div>
+  <span class="menu-spacer"></span>
 
-  
+  <div class="menu-item links" fxLayout="row" fxShow="true" fxHide.lt-md >
+    <div *ngFor="let m of menu; let i = index;">
+      <a routerLink="{{ m.link }}" mat-button>{{ m.name }}</a>
+    </div>
+  </div>
+
+  <div fxFlex fxShow="true" fxLayoutAlign="end center" fxLayoutGap="15px" class="system-menu-icons">
+      <mat-icon routerLink="" aria-hidden="false" aria-label="Example home icon">question_answer</mat-icon>
+      <mat-icon routerLink="" aria-hidden="false" aria-label="Example home icon">store</mat-icon>
+      <mat-icon routerLink="" aria-hidden="false" aria-label="Example home icon">settings</mat-icon>
+  </div>

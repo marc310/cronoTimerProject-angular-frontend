@@ -1,4 +1,7 @@
 main-menu {
-    display: flex;
+    span{
+        display: flex!important;
+        align-self: center;
+    }
     flex-grow: 1;
 }

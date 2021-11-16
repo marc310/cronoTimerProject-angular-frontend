@@ -20,6 +20,7 @@ import { MobileMenuComponent } from './shared/menu/mobile-menu/mobile-menu.compo
 // views
 import { HomeComponent } from './views/home/home.component';
 import { ProjectsComponent } from './views/workflow/projects/projects.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ProjectsComponent } from './views/workflow/projects/projects.component'
     MainMenuComponent,
     HomeComponent,
     ProjectsComponent,
-    MobileMenuComponent
+    MobileMenuComponent,
+    FooterComponent
   ],
   imports: [
     AppRoutingModule,

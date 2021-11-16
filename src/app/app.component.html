@@ -1,6 +1,6 @@
 
 <mat-toolbar color="primary">
-    <mat-toolbar-row >
+    <mat-toolbar-row class="container-fluid">
       <button 
         mat-icon-button 
         (click)="sidenav.toggle()"
@@ -10,11 +10,9 @@
       </button>
       <main-menu></main-menu>
     </mat-toolbar-row>
-
 </mat-toolbar>
 
 <mat-sidenav-container fxFlexFill>
-    
     <mat-sidenav #sidenav mode="side">
         <mobile-menu></mobile-menu>
     </mat-sidenav>

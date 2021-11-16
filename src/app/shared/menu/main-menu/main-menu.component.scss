@@ -2,11 +2,28 @@
     flex-grow: 1;
     max-width: 50px;
 }
+.menu-item{
+    display: flex!important;
+    align-self: center;
+}
+.logo-space{
+    cursor: pointer;
+    .logo-menu{
+        max-width: 55px;
+        margin-right: 5px;
+    }
+}
 .system-menu-icons{
     display: flex;
     & > mat-icon{
         align-self: center;
         color: white;
         cursor: pointer;
+    }
+}
+
+@media only screen  and (max-width: 945px) {
+    .menu-item.links{
+        display: none!important;
     }
 }
