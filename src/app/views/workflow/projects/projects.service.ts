@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../../../../environments/environment';
-import {map} from 'rxjs/operators';
+import { Observable } from 'rxjs';
+// import {map} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -9,20 +10,18 @@ import {map} from 'rxjs/operators';
 export class ProjectsService {
 
   apiDomain = `${environment.domain}`;
-  projetosApi = 'projetos/info';
+  projetosApi = 'api/projetos/info';
   projetoInfoApi = this.projetosApi + '/id/';
-  // categoryApi = 'restaurant-info?restaurant_id=';
-  // createOrderApi = 'guest/create-order';
-  // addItemToCartApi = 'guest/cart/add';
-  // changeCartItemQuantityApi = 'guest/cart/change-quantity';
-  // updateItemApi = 'guest/cart/update-item';
-  // removeItemApi = 'guest/cart/remove';
-  // emptyCartApi = 'guest/cart/empty';
 
   constructor( private http: HttpClient ) { }
 
-  public getProjetos(){
-    
+  // Headers
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  }
+  public getProjetos() : Observable<any>{
+    const data_content = this.http.get<any>(`${this.apiDomain}${this.projetosApi}`);
+    return data_content
   }
 
   // public getProduct(slug) {

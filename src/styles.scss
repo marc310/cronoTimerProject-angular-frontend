@@ -2,13 +2,39 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 main { 
-    text-align: center;
+    // text-align: center;
     position: relative;
 }
-
-/* do not edit above this line */
+@import '~@angular/material/theming';
 @import 'assets/scss/colors' ;
 @import 'assets/scss/variables' ;
 @import 'assets/scss/menu' ;
 
+   $app-typography: mat-typography-config(
+      $font-family: 'Muli, Roboto, "Helvetica Neue", sans-serif',
+      $display-4:     mat-typography-level(112px, 112px, 300),
+      $display-3:     mat-typography-level(56px, 56px, 400),
+      $display-2:     mat-typography-level(45px, 48px, 400),
+      $display-1:     mat-typography-level(34px, 40px, 400),
+      $headline:      mat-typography-level(24px, 32px, 400),
+      $title:         mat-typography-level(20px, 32px, 500),
+      $subheading-2:  mat-typography-level(16px, 28px, 400),
+      $subheading-1:  mat-typography-level(15px, 24px, 400),
+      $body-2:        mat-typography-level(14px, 24px, 500),
+      $body-1:        mat-typography-level(14px, 20px, 400),
+      $caption:       mat-typography-level(12px, 20px, 400),
+      $button:        mat-typography-level(14px, 14px, 500),
+      $input:         mat-typography-level(16px, 1.25, 400)
+    );
+
+    @include mat-core($app-typography);
+
+    $primary: mat-palette($mat-indigo); // $deeppurple form color_palette
+    $accent:  mat-palette($mat-indigo, A200, A100, A400);  // $blue form color_palette
+    $warn:    mat-palette($mat-amber);  // $red form color_palette
+    $theme:   mat-light-theme($primary, $accent, $warn);
+    @include  angular-material-theme($theme);  //app mixin from app_theme
+
+
+/* do not edit above this line */
 @import 'assets/scss/imports' ;
