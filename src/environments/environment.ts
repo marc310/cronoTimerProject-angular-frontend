@@ -4,8 +4,9 @@
 
 export const environment = {
   production: false,
-  domain: 'http://localhost/dev/projects/cronotimer-project/api/projetos/info/',
+  domain: 'http://localhost/dev/projects/cronotimer-project/api/',
   // mapApiKey: 'AIzaSyA6s497mKnN7hP7fzCRIOOAJ_wvpG-2RLM'
+  
 };
 
 /*

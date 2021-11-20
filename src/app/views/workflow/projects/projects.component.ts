@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectsService } from './projects.service';
 
 export interface PeriodicElement {
   name: string;
@@ -27,6 +28,10 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class ProjectsComponent {
 
+  projetos: Array<any> = new Array();
+  constructor( private projectsService: ProjectsService){
+    
+  }
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
 
